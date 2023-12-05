@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link rel="stylesheet" href="menu/4/w3.css">
+    <link rel="icon" type="image/jpg" href="images/banner.jpg">
+    <style>
+      body{
+        background: bisque;
+      }
+      img{
+        float: left;
+        height: 200px;
+        object-fit: cover;
+      }
+    </style>
+</head>
+<body>
+    <!-- Sidebar (hidden by default) -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left" style="display:none;z-index:2;width:40%;min-width:300px" id="mySidebar">
+    <a href="javascript:void(0)" onclick="w3_close()"
+    class="w3-bar-item w3-button w3-hover-orange"><i class="fa fa-times"></i></a>
+    <a href="index.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-orange w3-text-brown">Home</a>
+    <a href="about.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-orange w3-text-brown">About</a>
+    <a href="meal-plan.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-orange w3-text-brown">Meal Schedule</a>
+    <a href="log.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-orange w3-text-brown">Sign Up</a>
+  </nav>
+  <!-- Top menu -->
+<div class="w3-top">
+    <div class="w3-white w3-xlarge" style="max-width:1200px;margin:auto">
+      <div class="w3-button w3-padding-16 w3-left w3-hover-orange" onclick="w3_open()">☰</div>
+      <div class="w3-center w3-padding-16 w3-text-orange">Food Menu and Recipes</div>
+    </div>
+  </div>
+  <!-- !PAGE CONTENT! -->
+<div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
+
+  <!-- First Photo Grid-->
+  <h2 class="w3-bar-block w3-center w3-text-brown ">Main Dishes</h2>
+  <div class="w3-row-padding w3-padding-16 w3-center w3-container" id="food">
+    <div class="w3-quarter">
+      <img src="images/achu n fufu.jpg" alt="food" style="width:100%">
+        <button class="w3-button w3-black w3-margin-bottom"><h3 class="w3-opacity">Achu and cocoyam Fufu</h3></button>
+    </div>
+    <div class="w3-quarter">
+      <img src="images/bongo.jpg" alt="food" style="width:100%">
+        <button class="w3-button w3-black w3-margin-bottom"> <h3 class="w3-opacity">Mbongo Tchobi</h3></button>
+    </div>
+    <div class="w3-quarter">
+      <img src="images/beans pudding.jpg" alt="food" style="width:100%">
+        <button class="w3-button w3-black w3-margin-bottom"> <h3 class="w3-opacity">Koki Beans and plantain</h3></button>
+    </div>
+    <div class="w3-quarter">
+      <img src="images/egusi pudding.jpg" alt="Pasta and Wine" style="width:100%">
+        <button class="w3-button w3-black w3-margin-bottom"><h3 class="w3-opacity">Egusi Pudding</h3></button>
+    </div>
+  </div>
+  
+  <!-- Second Photo Grid-->
+  <div class="w3-row-padding w3-padding-16 w3-center">
+    <div class="w3-quarter">
+      <img src="images/fried snails.jpg" alt="food" style="width:100%">
+        <button class="w3-button w3-black w3-margin-bottom"><h3 class="w3-opacity">Snail Tomato Sauce</h3></button>
+    </div>
+    <div class="w3-quarter">
+      <img src="images/African Beef Stew.jpg" alt="food" style="width:100%">
+        <button class="w3-button w3-black w3-margin-bottom"> <h3 class="w3-opacity">Beef Stew</h3></button>
+    </div>
+    <div class="w3-quarter">
+      <img src="images/kwacoco.jpg" alt="food" style="width:100%">
+      <button class="w3-button w3-black w3-margin-bottom" ><h3 class="w3-opacity">Kwacoco</h3></button>
+    </div>
+    <div class="w3-quarter">
+      <img src="images/rice n sauce.jpg" alt="food" style="width:100%">
+        <button class="w3-button w3-black w3-margin-bottom"><h3 class="w3-opacity">Rice and Tomato Sauce</h3></button>
+    </div>
+  </div>
+
+  <!-- third Photo Grid-->
+  <div class="w3-row-padding w3-padding-16 w3-center">
+    <div class="w3-quarter">
+      <img src="images/(Cornchaff ) Sweet corn and pinto beans porridg.jpg" alt="food" style="width:100%">
+        <button class="w3-button w3-black w3-margin-bottom"><h3 class="w3-opacity">Cornchaff</h3></button>
+    </div>
+    <div class="w3-quarter">
+      <img src="images/Ekwang (Ekpang Nkukwo).jpg" alt="food" style="width:100%">
+        <button class="w3-button w3-black w3-margin-bottom"> <h3 class="w3-opacity">Ekpang</h3></button>
+    </div>
+    <div class="w3-quarter">
+      <img src="images/Okro and Eba.jpg" alt="food" style="width:100%">
+      <button class="w3-button w3-black w3-margin-bottom" ><h3 class="w3-opacity">Okro Soup and Garri</h3></button>
+    </div>
+    <div class="w3-quarter">
+      <img src="images/yam n ngacatoo.jpg" alt="food" style="width:100%">
+        <button class="w3-button w3-black w3-margin-bottom"><h3 class="w3-opacity">Yam and Njakatu</h3></button>
+    </div>
+  </div>
+
+  <!--  Photo Grid-->
+  <div class="w3-row-padding w3-padding-16 w3-center">
+    <div class="w3-quarter">
+      <img src="images/veggie.jpg" alt="food" style="width:100%">
+        <button class="w3-button w3-black w3-margin-bottom"><h3 class="w3-opacity">Ndole and Plantain</h3></button>
+    </div>
+    <div class="w3-quarter">
+      <img src="images/vegetable.jpg" alt="food" style="width:100%">
+        <button class="w3-button w3-black w3-margin-bottom"> <h3 class="w3-opacity">Green</h3></button>
+    </div>
+    <div class="w3-quarter">
+      <img src="images/served rice.jpg" alt="food" style="width:100%">
+      <button class="w3-button w3-black w3-margin-bottom" ><h3 class="w3-opacity">Rice and Chicken Sauce</h3></button>
+    </div>
+    <div class="w3-quarter">
+      <img src="images/potatoes.JPG" alt="food" style="width:100%">
+        <button class="w3-button w3-black w3-margin-bottom"><h3 class="w3-opacity">Irish hot Pot</h3></button>
+    </div>
+  </div>
+
+  <!--  Photo Grid-->
+  <div class="w3-row-padding w3-padding-16 w3-center">
+    <div class="w3-quarter">
+      <img src="images/Oven Baked Cameroonian Jollof.jpg" alt="food" style="width:100%">
+        <button class="w3-button w3-black w3-margin-bottom"><h3 class="w3-opacity">Jellof Rice</h3></button>
+    </div>
+    <div class="w3-quarter">
+      <img src="images/Peanut Curry with Tofu.jpg" alt="food" style="width:100%">
+        <button class="w3-button w3-black w3-margin-bottom"> <h3 class="w3-opacity">Peanut Curry with Tofu</h3></button>
+    </div>
+    <div class="w3-quarter">
+      <img src="images/black soup.jpg" alt="food" style="width:100%">
+      <button class="w3-button w3-black w3-margin-bottom" ><h3 class="w3-opacity">Black Soup</h3></button>
+    </div>
+    <div class="w3-quarter">
+      <img src="images/garri and eru.jpg" alt="food" style="width:100%">
+        <button class="w3-button w3-black w3-margin-bottom"><h3 class="w3-opacity">Garri and Eru</h3></button>
+    </div>
+  </div>
+
+  <!-- Photo Grid-->
+  <div class="w3-row-padding w3-padding-16 w3-center">
+    <div class="w3-quarter">
+      <img src="images/kati kati.jpg" alt="food" style="width:100%">
+        <button class="w3-button w3-black w3-margin-bottom"><h3 class="w3-opacity">Kati Kati and FufuCorn</h3></button>
+    </div>
+    <div class="w3-quarter">
+      <img src="images/cow hides sauce.jpg" alt="food" style="width:100%">
+        <button class="w3-button w3-black w3-margin-bottom"> <h3 class="w3-opacity">Kanda Sauce</h3></button>
+    </div>
+    <div class="w3-quarter">
+      <img src="images/mpuh fish.jpg" alt="food" style="width:100%">
+      <button class="w3-button w3-black w3-margin-bottom" ><h3 class="w3-opacity">Mpuh Fish</h3></button>
+    </div>
+    <div class="w3-quarter">
+      <img src="images/rice.jpg" alt="food" style="width:100%">
+        <button class="w3-button w3-black w3-margin-bottom"><h3 class="w3-opacity">Fried Rice</h3></button>
+    </div>
+  </div>
+   
+  <!--  Photo Grid-->
+  <div class="w3-row-padding w3-padding-16 w3-center">
+    <div class="w3-quarter">
+      <img src="images/rice plate.jpg" alt="food" style="width:100%">
+        <button class="w3-button w3-black w3-margin-bottom"><h3 class="w3-opacity">Rice and Ginseng Sauce</h3></button>
+    </div>
+    <div class="w3-quarter">
+      <img src="images/porridge.jpg" alt="food" style="width:100%">
+        <button class="w3-button w3-black w3-margin-bottom"> <h3 class="w3-opacity">Porridge</h3></button>
+    </div>
+    <div class="w3-quarter">
+      <img src="images/ndole.jpg" alt="food" style="width:100%">
+      <button class="w3-button w3-black w3-margin-bottom" ><h3 class="w3-opacity">Okonobong Ndole</h3></button>
+    </div>
+    <div class="w3-quarter">
+      <img src="images/meat.jpg" alt="food" style="width:100%">
+        <button class="w3-button w3-black w3-margin-bottom"><h3 class="w3-opacity">Rice and Meat Curry</h3></button>
+    </div>
+  </div>
+
+  <!--  Photo Grid-->
+  <div class="w3-row-padding w3-padding-16 w3-center">
+    <div class="w3-quarter">
+      <img src="images/plantain and vegetable.jpg" alt="food" style="width:100%">
+        <button class="w3-button w3-black w3-margin-bottom"><h3 class="w3-opacity">Bitter Leaf and Ploantain</h3></button>
+    </div>
+    <div class="w3-quarter">
+      <img src="images/pudding.jpg" alt="food" style="width:100%">
+        <button class="w3-button w3-black w3-margin-bottom"> <h3 class="w3-opacity">Koki Corn</h3></button>
+    </div>
+    <div class="w3-quarter">
+      <img src="images/chicken.jpg" alt="food" style="width:100%">
+      <button class="w3-button w3-black w3-margin-bottom" ><h3 class="w3-opacity">Poulet DG</h3></button>
+    </div>
+    <div class="w3-quarter">
+      <img src="images/okonobong.jpg" alt="food" style="width:100%">
+        <button class="w3-button w3-black w3-margin-bottom"><h3 class="w3-opacity">Okonobong</h3></button>
+    </div>
+  </div>
+
+  <h2 class="w3-bar-block w3-center w3-text-brown ">Snacks and Other Light Dishes</h2>
+   <!--  Photo Grid-->
+   <div class="w3-row-padding w3-padding-16 w3-center">
+    <div class="w3-quarter">
+      <img src="images/acra beans.jpg" alt="food" style="width:100%">
+        <button class="w3-button w3-black w3-margin-bottom"><h3 class="w3-opacity">Accra Beans</h3></button>
+    </div>
+    <div class="w3-quarter">
+      <img src="images/biscuits.jpg" alt="food" style="width:100%">
+        <button class="w3-button w3-black w3-margin-bottom"> <h3 class="w3-opacity">Backed Bread</h3></button>
+    </div>
+    <div class="w3-quarter">
+      <img src="images/chip n salad.jpg" alt="food" style="width:100%">
+        <button class="w3-button w3-black w3-margin-bottom"><h3 class="w3-opacity"> Pear Salad and Chips</h3></button>
+    </div>
+    <div class="w3-quarter">
+      <img src="images/croissant.jpg" alt="food" style="width:100%">
+        <button class="w3-button w3-black w3-margin-bottom"><h3 class="w3-opacity">Prawns</h3></button>
+    </div>
+  </div>
+
+    <!-- Photo Grid-->
+    <div class="w3-row-padding w3-padding-16 w3-center">
+      <div class="w3-quarter">
+        <img src="images/African Fish Roll (Fish Pie).jpg" alt="food" style="width:100%">
+          <button class="w3-button w3-black w3-margin-bottom"><h3 class="w3-opacity">Fish Rolls</h3></button>
+      </div>
+      <div class="w3-quarter">
+        <img src="images/fish n dodo.jpg" alt="food" style="width:100%">
+          <button class="w3-button w3-black w3-margin-bottom"> <h3 class="w3-opacity">Roasted Fish</h3></button>
+      </div>
+      <div class="w3-quarter">
+        <img src="images/CHICHIN RECIPE ( Crispy & crunchy chinchin ).jpg" alt="food" style="width:100%">
+        <button class="w3-button w3-black w3-margin-bottom" ><h3 class="w3-opacity">Chin Chin</h3></button>
+      </div>
+      <div class="w3-quarter">
+        <img src="images/Fried Plantain with Scrambled Eggs.jpg" alt="food" style="width:100%">
+          <button class="w3-button w3-black w3-margin-bottom"><h3 class="w3-opacity">Fried Plantains with Scrambled Eggs</h3></button>
+      </div>
+    </div>
+
+      <!-- Photo Grid-->
+  <div class="w3-row-padding w3-padding-16 w3-center">
+    <div class="w3-quarter">
+      <img src="images/Suya (Spicy Beef on a Stick).jpg" alt="food" style="width:100%">
+        <button class="w3-button w3-black w3-margin-bottom"><h3 class="w3-opacity">Suya -Spicy Beef Steak</h3></button>
+    </div>
+    <div class="w3-quarter">
+      <img src="images/Pap beans puff puff.jpg" alt="food" style="width:100%">
+        <button class="w3-button w3-black w3-margin-bottom"> <h3 class="w3-opacity">Pap and Puff Puff</h3></button>
+    </div>
+    <div class="w3-quarter">
+      <img src="images/steak.jpg" alt="food" style="width:100%">
+      <button class="w3-button w3-black w3-margin-bottom" ><h3 class="w3-opacity">Pork Steak</h3></button>
+    </div>
+    <div class="w3-quarter">
+      <img src="images/fish pie full.jpg" alt="food" style="width:100%">
+        <button class="w3-button w3-black w3-margin-bottom"><h3 class="w3-opacity">Fish Pie</h3></button>
+    </div>
+  </div>
+    <!-- Photo Grid-->
+    <div class="w3-row-padding w3-padding-16 w3-center">
+      <div class="w3-quarter">
+        <img src="images/Breakfast saved.jpg" alt="food" style="width:100%">
+          <button class="w3-button w3-black w3-margin-bottom"><h3 class="w3-opacity">Scrambled Eggs</h3></button>
+      </div>
+      <div class="w3-quarter">
+        <img src="images/dodo.jpg" alt="food" style="width:100%">
+          <button class="w3-button w3-black w3-margin-bottom"> <h3 class="w3-opacity">Dodo</h3></button>
+      </div>
+      <div class="w3-quarter">
+        <img src="images/fried rice.jpg" alt="food" style="width:100%">
+        <button class="w3-button w3-black w3-margin-bottom" ><h3 class="w3-opacity">Rice</h3></button>
+      </div>
+      <div class="w3-quarter">
+        <img src="images/fruit snack.jpg" alt="food" style="width:100%">
+          <button class="w3-button w3-black w3-margin-bottom"><h3 class="w3-opacity">Fruit Snack</h3></button>
+      </div>
+    </div>
+      <!-- Photo Grid-->
+  <div class="w3-row-padding w3-padding-16 w3-center">
+    <div class="w3-quarter">
+      <img src="images/hamburger.jpg" alt="food" style="width:100%">
+        <button class="w3-button w3-black w3-margin-bottom"><h3 class="w3-opacity">Hamburger</h3></button>
+    </div>
+    <div class="w3-quarter">
+      <img src="images/meat pie.jpg" alt="food" style="width:100%">
+        <button class="w3-button w3-black w3-margin-bottom"> <h3 class="w3-opacity">Meat Pie</h3></button>
+    </div>
+    <div class="w3-quarter">
+      <img src="images/meat snack.jpg" alt="food" style="width:100%">
+      <button class="w3-button w3-black w3-margin-bottom" ><h3 class="w3-opacity">Beef Snack</h3></button>
+    </div>
+    <div class="w3-quarter">
+      <img src="images/pancakes.jpg" alt="food" style="width:100%">
+        <button class="w3-button w3-black w3-margin-bottom"><h3 class="w3-opacity">Pancakes</h3></button>
+    </div>
+  </div>
+  <h2 class="w3-bar-block w3-center w3-text-brown ">Salad and fruits</h2>
+  <!-- Photo Grid-->
+  <div class="w3-row-padding w3-padding-16 w3-center">
+    <div class="w3-quarter">
+      <img src="images/Winter Fruit Salad - Cooking Classy.jpg" alt="food" style="width:100%">
+        <button class="w3-button w3-black w3-margin-bottom"><h3 class="w3-opacity">Fruit Salad</h3></button>
+    </div>
+    <div class="w3-quarter">
+      <img src="images/salad veggie.jpg" alt="food" style="width:100%">
+        <button class="w3-button w3-black w3-margin-bottom"> <h3 class="w3-opacity">Vegetable Salad</h3></button>
+    </div>
+    <div class="w3-quarter">
+      <img src="images/fruit salad.jpg" alt="food" style="width:100%">
+      <button class="w3-button w3-black w3-margin-bottom" ><h3 class="w3-opacity">Veggies Mixed Fruit Salad</h3></button>
+    </div>
+    <div class="w3-quarter">
+      <img src="images/snacky.jpg" alt="food" style="width:100%">
+        <button class="w3-button w3-black w3-margin-bottom"><h3 class="w3-opacity">Snack Salad</h3></button>
+    </div>
+  </div>
+  <!-- Photo Grid-->
+  <div class="w3-row-padding w3-padding-16 w3-center">
+    <div class="w3-quarter">
+      <img src="images/bananas.jpg" alt="food" style="width:100%">
+        <button class="w3-button w3-black w3-margin-bottom"><h3 class="w3-opacity">Bananas</h3></button>
+    </div>
+    <div class="w3-quarter">
+      <img src="images/mango.jpg" alt="food" style="width:100%">
+        <button class="w3-button w3-black w3-margin-bottom"> <h3 class="w3-opacity">Mangoes</h3></button>
+    </div>
+    <div class="w3-quarter">
+      <img src="images/water melon.jpg" alt="food" style="width:100%">
+      <button class="w3-button w3-black w3-margin-bottom" ><h3 class="w3-opacity">Water Melon</h3></button>
+    </div>
+    <div class="w3-quarter">
+      <img src="images/guava.jpg" alt="food" style="width:100%">
+        <button class="w3-button w3-black w3-margin-bottom"><h3 class="w3-opacity">Guavas</h3></button>
+    </div>
+  </div>
+  <!-- Photo Grid-->
+  <div class="w3-row-padding w3-padding-16 w3-center">
+    <div class="w3-quarter">
+      <img src="images/pear.jpg" alt="food" style="width:100%">
+        <button class="w3-button w3-black w3-margin-bottom"><h3 class="w3-opacity">Pear</h3></button>
+    </div>
+    <div class="w3-quarter">
+      <img src="images/plum.jpg" alt="food" style="width:100%">
+        <button class="w3-button w3-black w3-margin-bottom"> <h3 class="w3-opacity">Plums</h3></button>
+    </div>
+    <div class="w3-quarter">
+      <img src="images/coconut.jpg" alt="food" style="width:100%">
+      <button class="w3-button w3-black w3-margin-bottom" ><h3 class="w3-opacity">Coconut</h3></button>
+    </div>
+    <div class="w3-quarter">
+      <img src="images/pineapple.jpg" alt="food" style="width:100%">
+        <button class="w3-button w3-black w3-margin-bottom"><h3 class="w3-opacity">Pineapples</h3></button>
+    </div>
+  </div>
+  <!-- Photo Grid-->
+  <div class="w3-row-padding w3-padding-16 w3-center">
+    <div class="w3-quarter">
+      <img src="images/apples.jpg" alt="food" style="width:100%">
+        <button class="w3-button w3-black w3-margin-bottom"><h3 class="w3-opacity">Citrus Fruits</h3></button>
+    </div>
+    <div class="w3-quarter">
+      <img src="images/33 Foodie.jpg" alt="food" style="width:100%">
+        <button class="w3-button w3-black w3-margin-bottom"> <h3 class="w3-opacity">Fruit Variety</h3></button>
+    </div>
+    <div class="w3-quarter">
+      <img src="images/cucumber.jpg" alt="food" style="width:100%">
+      <button class="w3-button w3-black w3-margin-bottom" ><h3 class="w3-opacity">Cucumber</h3></button>
+    </div>
+    <div class="w3-quarter">
+      <img src="images/grapes.jpg" alt="food" style="width:100%">
+        <button class="w3-button w3-black w3-margin-bottom"><h3 class="w3-opacity">Grapes</h3></button>
+    </div>
+  </div>
+  <h2 class="w3-bar-block w3-center w3-text-brown ">Smoothiess and Drinks</h2>
+   <!-- Photo Grid-->
+   <div class="w3-row-padding w3-padding-16 w3-center">
+    <div class="w3-quarter">
+      <img src="images/Banana Avocado Smoothie Recipe _ Foodal.jpg" alt="food" style="width:100%">
+        <button class="w3-button w3-black w3-margin-bottom"><h3 class="w3-opacity">Banana and Avacado</h3></button>
+    </div>
+    <div class="w3-quarter">
+      <img src="images/Banana Cherry Smoothie.jpg" alt="food" style="width:100%">
+        <button class="w3-button w3-black w3-margin-bottom"> <h3 class="w3-opacity">Banana and Cherry</h3></button>
+    </div>
+    <div class="w3-quarter">
+      <img src="images/beet root juice.jpg" alt="food" style="width:100%">
+      <button class="w3-button w3-black w3-margin-bottom" ><h3 class="w3-opacity">Beetroot Juice </h3></button>
+    </div>
+    <div class="w3-quarter">
+      <img src="images/Le milkshake à la banane.jpg" alt="food" style="width:100%">
+        <button class="w3-button w3-black w3-margin-bottom"><h3 class="w3-opacity">Banana Milkshake</h3></button>
+    </div>
+  </div>
+   <!-- Photo Grid-->
+   <div class="w3-row-padding w3-padding-16 w3-center">
+    <div class="w3-quarter">
+      <img src="images/Watermelon Slushie Recipe.jpg" alt="food" style="width:100%">
+        <button class="w3-button w3-black w3-margin-bottom"><h3 class="w3-opacity">Watermelon Smoothie</h3></button>
+    </div>
+    <div class="w3-quarter">
+      <img src="images/Summer Mango Stone Fruit Smoothie.jpg" alt="food" style="width:100%">
+        <button class="w3-button w3-black w3-margin-bottom"> <h3 class="w3-opacity">Mango Smoothie</h3></button>
+    </div>
+    <div class="w3-quarter">
+      <img src="images/Pineapple Mango Smoothie.jpg" alt="food" style="width:100%">
+      <button class="w3-button w3-black w3-margin-bottom" ><h3 class="w3-opacity">Pineapple and Mango</h3></button>
+    </div>
+    <div class="w3-quarter">
+      <img src="images/snacks fruit.jpg" alt="food" style="width:100%">
+        <button class="w3-button w3-black w3-margin-bottom"><h3 class="w3-opacity">Fruit Juice</h3></button>
+    </div>
+  </div>
+   <!-- Photo Grid-->
+   <div class="w3-row-padding w3-padding-16 w3-center">
+    <div class="w3-quarter">
+      <img src="images/water.jpg" alt="food" style="width:100%">
+        <button class="w3-button w3-black w3-margin-bottom"><h3 class="w3-opacity">Water Very Important</h3></button>
+    </div>
+    <div class="w3-quarter">
+      <img src="images/lemonade.jpg" alt="food" style="width:100%">
+        <button class="w3-button w3-black w3-margin-bottom"> <h3 class="w3-opacity">Lemonade</h3></button>
+    </div>
+    <div class="w3-quarter">
+      <img src="images/images.jpg" alt="food" style="width:100%">
+      <button class="w3-button w3-black w3-margin-bottom" ><h3 class="w3-opacity">Cucumber smoothie</h3></button>
+    </div>
+    <div class="w3-quarter">
+      <img src="images/orange.jpg" alt="food" style="width:100%">
+        <button class="w3-button w3-black w3-margin-bottom"><h3 class="w3-opacity">Orange and Banana</h3></button>
+    </div>
+  </div>
+  <script>
+    // Script to open and close sidebar
+    function w3_open() {
+      document.getElementById("mySidebar").style.display = "block";
+    }
+     
+    function w3_close() {
+      document.getElementById("mySidebar").style.display = "none";
+    }
+
+    </script>
+    <script src="fontawesome/js/all.min.js"></script>
+</body>
+</html>

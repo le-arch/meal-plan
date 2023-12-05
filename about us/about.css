@@ -1,0 +1,434 @@
+/* navbar*/
+.navbar input[type="checkbox"],
+    .navbar .hamburger-lines{
+        display: none;
+    }
+
+.navbar{
+    box-shadow: 0px 5px 10px 0px #aaa;
+    position: fixed;
+    width: 100%;
+    background: #fff;
+    color: #000;
+    opacity: 0.85;
+    height: 50px;
+    z-index: 12;
+}
+.navbar-container{
+    display: flex;
+    justify-content: space-between;
+    height: 64px;
+    align-items: center;
+}
+.menu-items{
+    order: 2;
+    display: flex;
+}
+.menu-items li{
+    list-style: none;
+    margin-left: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+.menu-items a{
+    text-decoration: none;
+    color: #444;
+    font-weight: 500;
+    transition: color 0.3s ease-in-out;
+}
+.menu-items a:hover{
+    color: brown;
+    text-decoration: underline;
+    transition: color 0.3s ease-in-out;
+}
+
+.logo {
+    order: 1;
+    font-size: 2.3rem;
+    margin-bottom: 0.5rem;
+  }
+  /* ......../ media query /.......... */
+  
+  @media (max-width: 768px) {
+    .navbar {
+      opacity: 0.95;
+    }
+  
+    .navbar-container input[type="checkbox"],
+    .navbar-container .hamburger-lines {
+      display: block;
+    }
+  
+    .navbar-container {
+      display: block;
+      position: relative;
+      height: 64px;
+    }
+  
+    .navbar-container input[type="checkbox"] {
+      position: absolute;
+      display: block;
+      height: 32px;
+      width: 30px;
+      top: 20px;
+      left: 20px;
+      z-index: 5;
+      opacity: 0;
+    }
+  
+    .navbar-container .hamburger-lines {
+      display: block;
+      height: 23px;
+      width: 35px;
+      position: absolute;
+      top: 17px;
+      left: 20px;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  
+    .navbar-container .hamburger-lines .line {
+      display: block;
+      height: 4px;
+      width: 100%;
+      border-radius: 10px;
+      background: #333;
+    }
+  
+    .navbar-container .hamburger-lines .line1 {
+      transform-origin: 0% 0%;
+      transition: transform 0.4s ease-in-out;
+    }
+  
+    .navbar-container .hamburger-lines .line2 {
+      transition: transform 0.2s ease-in-out;
+    }
+  
+    .navbar-container .hamburger-lines .line3 {
+      transform-origin: 0% 100%;
+      transition: transform 0.4s ease-in-out;
+    }
+  
+    .navbar .menu-items {
+      padding-top: 100px;
+      background: #fff;
+      height: 100vh;
+      max-width: 300px;
+      transform: translate(-150%);
+      display: flex;
+      flex-direction: column;
+      margin-left: -40px;
+      padding-left: 50px;
+      transition: transform 0.5s ease-in-out;
+      box-shadow: 5px 0px 10px 0px #aaa;
+    }
+  
+    .navbar .menu-items li {
+      margin-bottom: 1.5rem;
+      font-size: 1.3rem;
+      font-weight: 500;
+    }
+  
+    .logo {
+      position: absolute;
+      top: 5px;
+      right: 15px;
+      font-size: 2rem;
+    }
+  
+    .navbar-container input[type="checkbox"]:checked ~ .menu-items {
+      transform: translateX(0);
+    }
+  
+    .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
+      transform: rotate(35deg);
+    }
+  
+    .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
+      transform: scaleY(0);
+    }
+  
+    .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
+      transform: rotate(-35deg);
+    }
+}
+  @media (max-width: 500px) {
+    html {
+      font-size: 65%;
+    }
+  
+    .navbar .menu-items li {
+      font-size: 1.6rem;
+    }
+    .logo {
+      position: absolute;
+      top: 06px;
+      right: 15px;
+      font-size: 0.2rem;
+    }
+  
+    .navbar .menu-items li {
+      margin-bottom: 2.5rem;
+      font-size: 1.8rem;
+      font-weight: 500;
+    }
+}
+ /*Start Footer*/
+ footer {
+  background-color: #121212;
+  padding: 60px 20px;
+}
+footer .text {
+  max-width: 500px;
+  margin: auto;
+}
+footer .text h2 {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 19px;
+  letter-spacing: 1.9px;
+  margin-bottom: 25px;
+}
+footer .text .fa-asterisk {
+  font-size: 12px;
+}
+footer .text p {
+  line-height: 27px;
+}
+footer .contact-container {
+  padding: 40px 0;
+  max-width: 1000px;
+  margin: auto;
+}
+footer .contact-container > div {
+  flex: 1;
+}
+footer .contact-container h3 {
+  font-size: 19px;
+  letter-spacing: 1.9px;
+}
+footer .social-media .links a {
+  margin: 0 10px;
+  font-size: 25px;
+}
+footer .newsletter input {
+  padding: 10px;
+  width: 270px;
+  background-color: #eee;
+  border: none;
+  margin-left: -15px;
+}
+footer .newsletter i {
+  margin-left: -40px;
+  vertical-align: middle;
+  font-size: 21px;
+}
+.copyright {
+  padding: 15px 40px 30px;
+  background-color: #262526;
+}
+.copyright .svg-up {
+  top: 0;
+  left: 50%;
+  margin-left: -96px;
+  margin-top: -50px;
+}
+.copyright .arrow-up {
+  width: 40px;
+  height: 30px;
+  top: -45px;
+  color: #fff;
+  line-height: 1.9
+}
+.copyright ul {
+  justify-content: center;
+}
+.copyright li {
+  color: #919191;
+  font-size: 14px;
+}
+.copyright li:not(:last-of-type):after {
+  content: '•';
+  margin: 10px;
+}
+.copyright .CTA {
+  margin-top: 25px;
+}
+.copyright .CTA li a {
+  color: #919191;
+}
+
+/*End Footer*/
+
+/*End Home Page*/
+
+/*Start Contact Page*/
+.contact-header {
+  background-image: url("images/dodo.jpg");
+  height: 40vh;
+}
+.contact {
+  padding: 78px 40px;
+}
+.contact > div {
+  flex: 50%;
+}
+.contact .text p {
+  margin-bottom: 30px;
+}
+.contact .text i {
+  width: 50px;
+  height: 50px;
+  background-color: #000;
+  border-radius: 50%;
+  line-height: 48px;
+  font-size: 24px;
+}
+.contact .text h2 {
+  font-family: source_sans_problack, sans-serif;
+  font-size: 24px;
+  color: #262626;
+  letter-spacing: 2.4px;
+  margin-bottom: 20px;
+}
+.contact .form {
+  margin-left: 48px;
+}
+.contact .form form label {
+  margin-bottom: 5px;
+  color: #515151;
+}
+.contact .form form input, .contact .form form textarea {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 24px;
+  border-radius: 5px;
+  border: 2px solid #D8D8D8;
+  outline: none;
+}
+.contact .form form input:focus, .contact .form form textarea:focus {
+  border-color: #a96700;
+  box-shadow: 0 1px 1px #737373;
+}
+.contact .form form textarea {
+  height: 212px;
+  resize: none;
+}
+.contact .form form button {
+  background-color: #262526;
+  padding: 12px 30px;
+  font-size: 12px;
+}
+/*End Contact Page*/
+
+/*Start Home Page Responsive*/
+
+@media (max-width: 1200px) {
+  .menu, .about-us, .reservation {
+      padding: 60px 40px;
+  }
+  .about-us .text, .reservation .text {
+      padding: 0 32px 0 0;
+  }
+  .about-us .image-container, .reservation .image-container {
+      align-items: center;
+  }
+  .menu .text {
+      padding: 0 0 0 32px;
+  }
+}
+
+@media (max-width: 992px) {
+  body {
+      padding: 0;
+  }
+  .dots {
+      display: none;
+  }
+  header {
+      height: calc(100vh - 10px);
+  }
+  header nav .logo {
+      padding-left: 0;
+  }
+  .about-us {
+      display: block;
+      padding-top: 50px;
+  }
+  .about-us .text , .reservation .text {
+      padding: 0 0 40px;
+  }
+  .about-us .image-container .image1, .reservation .image-container .image1 {
+      margin-left: 0;
+  }
+  .menu {
+      display: block;
+      padding: 60px 20px 60px 40px;
+  }
+  .menu .text {
+      padding: 20px 20px 0 0;
+  }
+  .reservation {
+      display: block;
+      padding: 30px 20px 60px;
+  }
+  .contact {
+      display: block;
+      padding: 78px 20px;
+  }
+  .contact .form {
+      margin-left: 0;
+      margin-top: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  header nav {
+      display: block;
+      text-align: center;
+      left: 0;
+      top: 0;
+      width: 100%;
+      padding-top: 25px;
+  }
+  header nav .toggle {
+      display: block;
+  }
+  header .navigation-bar {
+      position: fixed;
+      top: 0;
+      left: -174px;
+      height: 100%;
+      background-color: #262526;
+      overflow: hidden;
+      z-index: 20;
+      padding: 40px;
+  }
+  header .navigation-bar ul {
+      display: block;
+      padding-top: 40px;
+  }
+  header .navigation-bar ul li {
+      text-align: left;
+      padding: 14px 0;
+  }
+  footer .contact-container {
+      display: block;
+  }
+  footer .social-media {
+      margin-bottom: 40px;
+  }
+  .copyright ul {
+      display: block;
+      margin-top: -20px;
+  }
+  .copyright li {
+      margin-bottom: 5px;
+  }
+  .copyright li:not(:last-of-type):after {
+      content: '';
+  }
+
+}
