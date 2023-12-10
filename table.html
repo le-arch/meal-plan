@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/banner.jpg" type="image/jpg">
+    <title>Meal plan</title>
+    <style>
+        body{
+            margin: 1rem;
+            background-color: whitesmoke;
+        }
+       #formContainer{
+        margin-bottom: 20px;
+       } 
+       label{
+        display: block;
+        margin-top: 10px;
+       }
+       input, textarea{
+        width: 300px;
+        padding: 8px;
+        margin-top:5px;
+        border: 1px solid #ceee;
+        border-radius: 4px;
+       }
+       button{
+        margin: 10px;
+        padding: 8px 16px;
+        background-color: orange;
+        color: aliceblue;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+       }
+       button:hover{
+        background-color: orangered;
+       }
+       table{
+        border-collapse: collapse;
+        margin-bottom: 20px;
+        width: 100%;
+       }
+       th, td{
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+       }
+       th{
+        background-color: brown;
+        color: azure;
+       }
+       .performance-facts {
+  border: 2px solid black;
+  margin: 20px;
+  float: center;
+  width: 1000px;
+  padding: 0.5rem;
+  table {
+    border-collapse: collapse;
+  }
+}
+.performance-facts__title {
+  font-weight: bold;
+  font-size: 2rem;
+  margin: 0 0 0.25rem 0;
+}
+.performance-facts__header {
+  border-bottom: 10px solid black;
+  padding: 0 0 0.25rem 0;
+  margin: 0 0 0.5rem 0;
+  p {
+    margin: 0;
+  }
+}
+.performance-facts__table {
+  width: 100%;
+  thead tr {
+    th,
+    td {
+      border: 0;
+    }
+  }
+  th,
+  td {
+    font-weight: normal;
+    text-align: left;
+    padding: 0.25rem 0;
+    border-top: 1px solid black;
+    white-space: nowrap;
+  }
+  td {
+    &:last-child {
+      text-align: right;
+    }
+  }
+  .blank-cell {
+    width: 1rem;
+    border-top: 0;
+  }
+  .thick-row {
+    th,
+    td {
+      border-top-width: 7px;
+    }
+  }
+}
+.small-info {
+  font-size: 0.7rem;
+}
+
+.performance-facts__table--small {
+ /* @extend .performance-facts__table;*/
+  border-bottom: 1px solid #999;
+  margin: 1 1 0.5rem 1;
+  thead {
+    tr {
+      border-bottom: 1px solid black;
+    }
+  }
+  td {
+    &:last-child {
+      text-align: left;
+    }
+  }
+  th,
+  td {
+    border: 2px;
+    padding: 3px;
+  }
+}
+
+.performance-facts__table--grid {
+ /* @extend .performance-facts__table;*/
+  margin: 0 0 0.5rem 0;
+  td {
+    &:last-child {
+      text-align: left;
+      &::before {
+        content: "•";
+        font-weight: bold;
+        margin: 0 0.25rem 0 0;
+      }
+    }
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+.thick-end {
+  border-bottom: 10px solid black;
+}
+.thin-end {
+  border-bottom: 1px solid black;
+}
+    </style>
+</head>
+<body>
+    <a href="index.html" style="text-decoration: none; color: orange;"><button style="border: none;border-radius: 5px; color: orange; background-color: rgb(241, 215, 181);">Home &larr;</button></a>
+    <div class="formContainer">
+        <label for="day">Day:</label>
+        <input type="date" name="" id="day">
+        <label for="name">Meal Name: </label>
+        <input type="text" id="name" placeholder="enter meal">
+        <label for="calories">Calories:</label>
+        <input type="number" id="calories">
+        <label for="notes">Notes</label>
+        <textarea  id="notes" placeholder="enter notes"></textarea>
+        <button onclick="addData()">Add</button>
+    </div>
+    <div><p style="color: brown; font-size: large;">Enter details and click the Add button to fill in the table.</p></div>
+    <table id="outputTable">
+        <tr>
+           <td style="color: #e20f0f;">Breakfast &#x1f373; <br> 300 - 400 kcal</td>
+           <td style="color: #32a6de;">Lunch &#x1f35c; <br>500 - 700 kcal</td>
+           <td style="color: #e29d1d;">Dinner &#x1f959; <br>400 - 600 kcal</td>
+           <td style="color: #68169c">Snacks and smoothies &#127790; &#9749; <br>100 - 300 kcal</td>
+        </tr>
+        <tr>
+            <th>Day</th>
+            <th>Meal</th>
+            <th>Calories</th>
+            <th>Notes</th>
+        </tr>
+    </table> <br>
+    <p style="color:orangered; font-size: large; text-align: center; text-decoration: underline;">Check out nutritional facts about calories intake</p>
+    <div class="performance-facts">
+        <header class="performance-facts__header">
+          <h1 class="performance-facts__title">Nutrition Facts</h1>
+          <p>Serving Size 1/2 cup (about 82g)
+            <p>Serving Per Container 8</p>
+        </header>
+        <table class="performance-facts__table">
+          <thead>
+            <tr>
+              <th colspan="3" class="small-info">
+                Amount Per Serving
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th colspan="2">
+                <b>Calories</b>
+                200
+              </th>
+              <td>
+                Calories from Fat
+                130
+              </td>
+            </tr>
+            <tr class="thick-row">
+              <td colspan="3" class="small-info">
+                <b>% Daily Value*</b>
+              </td>
+            </tr>
+            <tr>
+              <th colspan="2">
+                <b>Total Fat</b>
+                14g
+              </th>
+              <td>
+                <b>22%</b>
+              </td>
+            </tr>
+            <tr>
+              <td class="blank-cell">
+              </td>
+              <th>
+                Saturated Fat
+                9g
+              </th>
+              <td>
+                <b>22%</b>
+              </td>
+            </tr>
+            <tr>
+              <td class="blank-cell">
+              </td>
+              <th>
+                Trans Fat
+                0g
+              </th>
+              <td>
+              </td>
+            </tr>
+            <tr>
+              <th colspan="2">
+                <b>Cholesterol</b>
+                55mg
+              </th>
+              <td>
+                <b>18%</b>
+              </td>
+            </tr>
+            <tr>
+              <th colspan="2">
+                <b>Sodium</b>
+                40mg
+              </th>
+              <td>
+                <b>2%</b>
+              </td>
+            </tr>
+            <tr>
+              <th colspan="2">
+                <b>Total Carbohydrate</b>
+                17g
+              </th>
+              <td>
+                <b>6%</b>
+              </td>
+            </tr>
+            <tr>
+              <td class="blank-cell">
+              </td>
+              <th>
+                Dietary Fiber
+                1g
+              </th>
+              <td>
+                <b>4%</b>
+              </td>
+            </tr>
+            <tr>
+              <td class="blank-cell">
+              </td>
+              <th>
+                Sugars
+                14g
+              </th>
+              <td>
+              </td>
+            </tr>
+            <tr class="thick-end">
+              <th colspan="2">
+                <b>Protein</b>
+                3g
+              </th>
+              <td>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      
+        <table class="performance-facts__table--grid">
+          <tbody>
+            <tr>
+              <td colspan="2">
+                Vitamin A
+                10%
+              </td>
+              <td>
+                Vitamin C
+                0%
+              </td>
+            </tr>
+            <tr class="thin-end">
+              <td colspan="2">
+                Calcium
+                10%
+              </td>
+              <td>
+                Iron
+                6%
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      
+        <p class="small-info">* Percent Daily Values are based on a 2,000 calorie diet. Your daily values may be higher or lower depending on your calorie needs:</p>
+      
+        <table class="performance-facts__table--small small-info">
+          <thead>
+            <tr>
+              <td colspan="2"></td>
+              <th>Calories:</th>
+              <th>2,000</th>
+              <th>2,500</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th colspan="2">Total Fat</th>
+              <td>Less than</td>
+              <td>65g</td>
+              <td>80g</td>
+            </tr>
+            <tr>
+              <td class="blank-cell"></td>
+              <th>Saturated Fat</th>
+              <td>Less than</td>
+              <td>20g</td>
+              <td>25g</td>
+            </tr>
+            <tr>
+              <th colspan="2">Cholesterol</th>
+              <td>Less than</td>
+              <td>300mg</td>
+              <td>300 mg</td>
+            </tr>
+            <tr>
+              <th colspan="2">Sodium</th>
+              <td>Less than</td>
+              <td>2,400mg</td>
+              <td>2,400mg</td>
+            </tr>
+            <tr>
+              <th colspan="3">Total Carbohydrate</th>
+              <td>300g</td>
+              <td>375g</td>
+            </tr>
+            <tr>
+              <td class="blank-cell"></td>
+              <th colspan="2">Dietary Fiber</th>
+              <td>25g</td>
+              <td>30g</td>
+            </tr>
+        </tbody>
+    </table>
+  
+    <p class="small-info">
+      Calories per gram:
+    </p>
+    <p class="small-info text-center">
+      Fat 9
+      &bull;
+      Carbohydrate 4
+      &bull;
+      Protein 4
+    </p>
+  
+  </div>
+      
+    <script>
+         // Define the meal plan data
+const mealPlan = [
+{ id: 1,name: 'Breakfast',color: '#e20f0f',kcal: '300 - 400 kcal', icon: '&#x1f373' },
+{id: 2, name: 'Smoothies', color: '#157d13', kcal: '100 - 200 kcal', icon: '&#9749;'},
+{ id: 3, name: 'Lunch', color: '#32a6de', kcal: '500 - 700 kcal', icon: '&#x1f35c' },
+{id: 4, name: 'Dinner',  color: '#e29d1d',  kcal: '400 - 600 kcal',  icon: '&#x1f959'},
+{id: 5,name: 'Snacks',color: '#68169c',kcal: '100 - 200 kcal',icon: '&#127790;'}
+  // Add meal plan data for each day here
+];
+
+function addData() { 
+            // Get input values 
+            let day = 
+                document.getElementById("day").value; 
+            let name = 
+                document.getElementById("name").value; 
+            let calories = 
+                document.getElementById("calories").value; 
+            let notes = 
+                document.getElementById("notes").value; 
+            
+            // Get the table and insert a new row at the end 
+            let table = document.getElementById("outputTable"); 
+            let newRow = table.insertRow(table.rows.length); 
+            
+            // Insert data into cells of the new row 
+            newRow.insertCell(0).innerHTML = day; 
+            newRow.insertCell(1).innerHTML = name; 
+            newRow.insertCell(2).innerHTML = calories; 
+            newRow.insertCell(3).innerHTML = notes; 
+            newRow.insertCell(4).innerHTML = 
+                '<button onclick="editData(this)">Edit</button>'+ 
+                '<button onclick="deleteData(this)">Delete</button>'; 
+            
+            // Clear input fields 
+            clearInputs(); 
+        } 
+  
+        function editData(button) { 
+            
+            // Get the parent row of the clicked button 
+            let row = button.parentNode.parentNode; 
+            
+            // Get the cells within the row 
+            let dayCell = row.cells[0]; 
+            let nameCell = row.cells[1]; 
+            let caloriesCell = row.cells[2]; 
+            let notesCell = row.cells[3]; 
+            
+            // Prompt the user to enter updated values 
+            let dayInput = 
+                prompt("Enter the updated day:", 
+                    dayCell.innerHTML); 
+            let nameInput = 
+                prompt("Enter the updated name:", 
+                    nameCell.innerHTML); 
+            let numberInput = 
+                prompt("Enter the updated calorie details:", 
+                    caloriesCell.innerHTML 
+                ); 
+            let notesInput = 
+                prompt("Enter the updated notes:", 
+                    notesCell.innerHTML 
+                ); 
+            
+            // Update the cell contents with the new values 
+            dayCell.innerHTML = dayInput; 
+            nameCell.innerHTML = nameInput; 
+            caloriesCell.innerHTML = numberInput; 
+            notesCell.innerHTML = notesInput; 
+        } 
+        function deleteData(button) { 
+            
+            // Get the parent row of the clicked button 
+            let row = button.parentNode.parentNode; 
+  
+            // Remove the row from the table 
+            row.parentNode.removeChild(row); 
+        } 
+        function clearInputs() { 
+            
+            // Clear input fields 
+            document.getElementById("day").value = ""; 
+            document.getElementById("name").value = ""; 
+            document.getElementById("calories").value = ""; 
+            document.getElementById("notes").value = ""; 
+        }  
+
+    </script>
+</body>
+</html>

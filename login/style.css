@@ -12,14 +12,14 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: burlywood;
+  background: #000;
 }
 
 .wrapper {
   position: relative;
   width: 400px;
   height: 500px;
-  background: rgb(240, 175, 95);
+  background: #000;
   box-shadow: 0 0 50px #0ef;
   border-radius: 20px;
   padding: 40px;
@@ -27,7 +27,7 @@ body {
 }
 
 .wrapper:hover {
-  animation: animate 1s linear infinite;
+  animation: animate 1s linear ;
 }
 
 @keyframes animate {
@@ -76,7 +76,7 @@ h2 {
   top: 50%;
   left: 5px;
   transform: translateY(-50%);
-  font-size: 16px;
+  font-size: 20px;
   color: #fff;
   pointer-events: none;
   transition: .5s;
@@ -85,7 +85,7 @@ h2 {
 .input-group input {
   width: 320px;
   height: 40px;
-  font-size: 16px;
+  font-size: 18px;
   color: #fff;
   padding: 0 5px;
   background: transparent;
@@ -127,7 +127,7 @@ button {
 }
 
 .signUp-link {
-  font-size: 14px;
+  font-size: 18px;
   text-align: center;
   margin: 15px 0;
 }
